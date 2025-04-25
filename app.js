@@ -9,9 +9,9 @@
     let currentCategory = "all";
 
     const categoryMap = {
-        "men's clothing": "men's clothing",
-        "women's clothing": "women's clothing",
-        jewelry: "jewelery",
+        "men's clothing": "mens clothing",
+        "women's clothing": "womens clothing",
+        jewelery: "jewelery",
         electronics: "electronics",
     };
 
@@ -37,9 +37,31 @@
     }
 
     function renderHome() {
-        app.innerHTML = `
+      app.innerHTML = `
         <div class="banner">
-          <img src="./assets/main.png.jpg"
-        `
+          <img src="./assets/main.png.jpg" alt="img1" />
+          <div class="banner-text">
+            <h2>New Season Arrivals</h2>
+            <p>This is a wilder card with supporting text below as a natural lead-in to additional content. This content is a little longer.</p>
+          </div>
+        </div>
+        <h3 class="section-title">Latest Products</h3>
+        <hr class="divider" />
+        <div class="category-filters" id="category-filters">
+          <button class="category-btn active" data-category="all">All</button>
+          <button class="category-btn" data-category="mens clothing">Men's Clothing</button>
+          <button class="category-btn" data-category="womens clothing">Women's Clothing</button>
+          <button class="category-btn" data-category="jewelery">Jewelery</button>
+          <button class="category-btn" data-category="electronics">Electronics</button>
+        </div>
+        <div class="product-grid" id="products-list"></div>
+      `;
+      renderProductsList(filteredProducts);
+      attachCategoryFiltersListeners();
+    }
+
+    function renderProductsList(list) {
+        const container = document.getElementById("products-list");
+        
     }
 })

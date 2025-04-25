@@ -7,7 +7,7 @@ body{
 }
 
 header{
-    border-bottom: 1px solid wheat;
+    border-bottom: 1px solid rgb(225, 221, 252);
     background: white;
     position: sticky;
     top: 0;
@@ -15,11 +15,80 @@ header{
 }
 
 nav{
-    max-width: 1140px;
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.brand{
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+.nav-links{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+
+}
+.nav-link{
+    font-size: 14px;
+    color: rgb(106, 118, 130);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+.nav-link:hover{
+    color: rgb(21, 25, 29);
+}
+.nav-actions{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.btn-outline{
+    border: 1px solid rgb(219, 219, 227);
+    background: transparent;
+    color: rgb(21, 25, 29);
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 4px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    user-select: none;
+
+}
+.btn-outline:hover{
+    background: rgb(243, 242, 245);
+}
+main{
+    width: 1000px;
+    margin: 10px auto;
+    padding: 0 10px;
+
+}
+.banner{
+    height: 200px;
+    
+}
+footer{
+    text-align: center;
+    color: rgb(111, 120, 130);
+    font-size: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgb(225, 221, 252);
+}
+footer a{
+    color: rgb(111, 120, 130);
+    text-decoration: underline;
+    user-select: none;
+}
+footer a:hover{
+    color: rgb(21, 25, 29);
 }
