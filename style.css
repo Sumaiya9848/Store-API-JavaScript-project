@@ -1,5 +1,5 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
     background: white;
@@ -15,7 +15,7 @@ header{
 }
 
 nav{
-    max-width: 1150px;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 8px 16px;
     display: flex;
@@ -68,15 +68,82 @@ nav{
     background: rgb(243, 242, 245);
 }
 main{
-    width: 1000px;
-    margin: 10px auto;
-    padding: 0 10px;
+    max-width: 1140px;
+    margin: 25px auto;
+    padding: 0 16px;
 
 }
 .banner{
-    height: 200px;
-    
+    position: relative;
+    height: 300px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 24px;
 }
+.banner img{
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.banner-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 24px;
+    background: linear-gradient(transparent, black);
+    color: white;
+    top: 100px;
+}
+.banner-text h2{
+    margin: 0 0 4px 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+.banner-text p{
+    font-size: 14px;
+    max-width: 650px;
+    line-height: 1.6;
+}
+h3.section-title{
+    text-align: center;
+    color: rgb(106, 118, 130);
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+hr.divider{
+    border: none;
+    border-top: 1px solid #dde3e9;
+    margin-bottom: 24px;
+}
+.category-filters{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+.category-btn{
+    font-size: 12px;
+    padding: 4px 12px;
+    border: 1px solid rgb(205, 205, 219);
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgb(106, 118, 130);
+    user-select: none;
+    white-space: nowrap;
+}
+.category-btn.active{
+    background: rgb(252, 249, 249);
+    border-color: rgb(106, 118, 130);
+    color: rgb(106, 118, 130);
+}
+.category-btn:hover:not(.active) {
+    background: rgb(252, 249, 249);
+}
+
 footer{
     text-align: center;
     color: rgb(111, 120, 130);

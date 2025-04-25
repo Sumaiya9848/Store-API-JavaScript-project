@@ -42,7 +42,7 @@
           <img src="./assets/main.png.jpg" alt="img1" />
           <div class="banner-text">
             <h2>New Season Arrivals</h2>
-            <p>This is a wilder card with supporting text below as a natural lead-in to additional content. This content is a little longer.</p>
+            <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
         </div>
         <h3 class="section-title">Latest Products</h3>
@@ -64,4 +64,12 @@
         const container = document.getElementById("products-list");
         
     }
-})
+
+    async function init() {
+        await fetchProducts();
+        renderHome();
+        
+    }
+
+    init();
+})();
