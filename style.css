@@ -1,0 +1,25 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+}
+
+header{
+    border-bottom: 1px solid wheat;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
