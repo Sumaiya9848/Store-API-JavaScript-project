@@ -137,7 +137,7 @@
     
     function renderAbout() {
         app.innerHTML = `
-          <div>
+          <div class="centered-form-container">
             <h2>About Us</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facere doloremque veritatis odit similique sequi. Odit amet fuga nam quam quasi facilis sed doloremque saepe sint perspiciatis explicabo totam vero quas provident ipsam, veritatis nostrum velit quos recusandae est mollitia esse fugit dolore laudantium. Ex vel explicabo earum unde eligendi autem praesentium, doloremque distinctio nesciunt porro tempore quis eaque labore voluptatibus ea necessitatibus exercitationem tempora molestias. Ad consequuntur veniam sequi ullam tempore vel tenetur soluta dolore sunt maxime aliquam corporis est, quo saepe dolorem optio minus sint nemo totam dolorum! Reprehenderit delectus expedita a alias nam recusandae illo debitis repellat libero, quasi explicabo molestiae saepe, dolorem tempore itaque eveniet quam dignissimos blanditiis excepturi harum numquam vel nihil? Ipsum</p>
             <h3>Our Products</h3>
@@ -164,7 +164,55 @@
     }
 
     function renderContact() {
+        app.innerHTML = `
+          <div class="centered-form-container">
+            <h2>Contact Us</h2>
+            <form id="contact-form" novalidate>
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" required/>
+              <label for="contact-email">Email address</label>
+              <input type="email" id="contact-email" required/>
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" rows="4" required></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        `;
+        document.getElementById("contact-form").onsubmit = e => {
+            e.preventDefault();
+            alert("Message sent!");
+            e.target.reset();
+        };
+    }
 
+    function renderLogin() {
+        app.innerHTML = `
+          <div class="centered-form-container">
+            <h2>Login</h2>
+            <form id="login-form" novalidate>
+              <label for="login-email">Email address</label>
+              <input type="email" id="login-email" required/>
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password" required/>
+              <p style="font-size:13px;">New here? <a href="#" id="link-register">Register</a></p>
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        `;
+        document.getElementById("link-register").onclick = e => {
+            e.preventDefault();
+            currentPage = "register";
+            renderRegister();
+        };
+        document.getElementById("login-form").onsubmit = e => {
+            e.preventDefault();
+            alert("Login submitted!");
+            e.target.reset();
+        };
+    }
+
+    function renderRegister() {
+        
     }
 
     async function init() {

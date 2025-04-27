@@ -196,7 +196,51 @@ hr.dividers{
     gap: 8px;
     margin-top: auto;
 }
-
+.btn-details{
+    flex: 0 0 70px;
+    height: 28px;
+    background: rgb(33, 38, 41);
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: default;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-details:hover,
+.btn-details:focus{
+    background: rgb(55, 55, 68);
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+.btn-add-cart{
+    flex: 1;
+    height: 28px;
+    background: rgb(33, 38, 41);
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-add-cart:hover{
+    background: rgb(55, 55, 68);
+}
+.centered-form-container{
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
 footer{
     text-align: center;
     color: rgb(111, 120, 130);
