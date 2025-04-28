@@ -212,8 +212,34 @@
     }
 
     function renderRegister() {
-        
+        app.innerHTML = `
+          <div class="centered-form-container">
+            <h2>Register</h2>
+            <form id="register-form" novalidate>
+              <label for="register-fullname">Full Name</label>
+              <input type="text" id="register-email">Email address</label>
+              <label for="register-email">Email address</label>
+              <input type="email" id="register-email" required/>
+              <label for="register-password">Password</label>
+              <input type="password" id="required-password" required/>
+              <p style="font-size:13px;">Already have an account? <a href="#" id="link-login">Login</a></p>
+              <button type="submit">Register</button>
+            </form>
+          </div>
+        `;
+        document.getElementById("link-login").onclick = e => {
+            e.preventDefault();
+            currentPage = "login"
+            renderLogin();
+        };
+        document.getElementById("register-form").onsubmit = e => {
+            e.preventDefault();
+            alert("Registration submitted!");
+            e.target.reset();
+        };
     }
+
+    
 
     async function init() {
         await fetchProducts();
