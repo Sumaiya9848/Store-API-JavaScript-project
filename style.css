@@ -241,6 +241,36 @@ hr.dividers{
     margin: 0 auto;
     padding: 0 16px;
 }
+form label{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+}
+form input,
+form textarea {
+    width: 100%;
+    padding: 6px 8px;
+    font-size: 14px;
+    border: 1px solid rgb(205, 203, 215);
+    border-radius: 4px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+form button{
+    background: rgb(40, 38, 38);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 13px;
+}
+form button:hover{
+    background: rgb(56, 54, 54);
+}
 footer{
     text-align: center;
     color: rgb(111, 120, 130);
@@ -254,7 +284,7 @@ footer a{
     user-select: none;
 }
 footer a:hover{
-    color: rgb(21, 25, 29);
+    color: rgb(40, 38, 38);
 }
 
 @media (max-width: 575.98px) {
@@ -293,5 +323,5 @@ footer a:hover{
     .nav-actions{
         gap: 8px;
     }
-    
+
 }
