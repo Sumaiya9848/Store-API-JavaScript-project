@@ -256,3 +256,42 @@ footer a{
 footer a:hover{
     color: rgb(21, 25, 29);
 }
+
+@media (max-width: 575.98px) {
+    .product-img{
+        height: 140px;
+    }
+    .product-title{
+        font-size: 10px;
+    }
+    .product-desc{
+        font-size: 9px;
+        height: 32px;
+    }
+    .product-price{
+        font-size: 12px;
+    }
+    .btn-details{
+        height: 26px;
+        width: 60px;
+        font-size: 12px;
+    }
+    .btn-add-cart{
+        height: 26px;
+        font-size: 12px;
+    }
+    .centered-form-container{
+        max-width: 100%;
+        padding: 0 16px;
+    }
+    nav{
+     padding: 8px;   
+    }
+    .nav-links{
+        gap: 8px;
+    }
+    .nav-actions{
+        gap: 8px;
+    }
+    
+}

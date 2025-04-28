@@ -239,11 +239,113 @@
         };
     }
 
-    
+    function renderCart() {
+        const cartItems = Object.values(cart);
+        if (cartItems.length === 0) {
+            app.innerHTML = `
+              <h2>Cart</h2>
+              <p style="color:rgb(108, 117, 125);">YOUR CART IS EMPTY</p>
+              <button class="btn-continue-shopping"</button>
+            `;
+            return;
+        }
+        let total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+        total += 5;
+        app.innerHTML = `
+          <h2>Cart</h2>
+          <h4>Item List</h4>
+          <div style="display:flex; gap:16px; flex-wrap:wrap">
+            <div style="flex:1; min-width:280px;">
+              <ul style="list-style:none; padding:0; margin:0;">
+                ${cartItems.map(item => `
+                    <li style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap;">
+                      <div style:"display:flex; align-items:center; gap:8px; flex:1; min-width:150px;">
+                        <img src="${item.image}" alt="${item.title}" style="height:60px"; width:60px; object-fit:contain;"/>
+                        <div>
+                          <div title="${item.title}" style="font-weight:600; font-size:15px;">${item.title}</div>
+                          <div style="font-size:13px; color: rgb(108, 117, 125);">${formatPrice(item.price)}</div>
+                        </div>
+                      </div>
+                      <div style="display:flex; align-items:center; gap:8px; margin-left:auto;">
+                        <button style="padding:4px 8px; font-size:8px; cursor:pointer;" data-id="${item.id}" data-action="decrease">-</button>
+                        <span>${item.quantity}</span>
+                        <button style="padding:4px 8px; font-size:16px; cursor:pointer;" data-id="${item.id}" data-action="increase">+</button>
+                      </div>
+                    </li>
+                `).join('')}
+              </ul>
+            </div>
+            <div class="order-summary">
+              <h3>Order Summary</h3>
+              ${cartItems.map(item => `
+                <div class="summary-item">
+                  <span>${item.title} (${item.quantity})</span>
+                  <span>${formatPrice(item.price * item.quantity)}</span>
+                </div>
+                `).join('')}
+                <div class="summary-item">
+                  <strong>Shipping</strong>
+                  <strong>$ 5.00</strong>
+                </div>
+                <div class="summary-total">
+                  <span>Total</span>
+                  <span>${formatPrice(total)}</span>
+                </div>
+                <button class="checkout-btn">Go to Checkout</button>
+            </div>
+          </div>
+        `;
+        const qtyButtons = app.querySelectorAll('button[data-id]');
+        qtyButtons.forEach(btn => {
+            btn.onclick = () => {
+                const id = btn.dataset.id;
+                const action = btn.dataset.action;
+                if (action == "increase") {
+                    cart[id].quantity++;
+                } else if (action == "decrease") {
+                    cart[id].quantity--;
+                    if (cart[id].quantity <= 0) {
+                        delete cart[id];
+                    }
+                }
+                updateCartCount();
+                renderCart();
+            };
+        }); 
+    }
+
+    function addToCart(id){
+        const product = products.find(p => p.id == id);
+        if (!product) return;
+        if (cart[id]) {
+            cart[id].quantity++;
+        } else{
+            cart[id] = {...product, quantity: 1};
+        }
+        updateCartCount();
+    }
+
+    function updateCartCount() {
+        const count = Object.values(cart).reduce((acc, item) => acc + item.quantity, 0);
+        cartCountE1.textContent = count;
+    }
+
+    function setupNavigation() {
+        document.getElementById("nav-home").onclick = () => { currentPage = "home"; renderHome(); };
+        document.getElementById("nav-home-link").onclick = () => { currentPage = "home"; renderHome(); };
+        document.getElementById("nav-products-link").onclick = () => { currentPage = "products"; renderProducts(); };
+        document.getElementById("nav-about-link").onclick = () => { currentPage = "about"; renderAbout(); };
+        document.getElementById("nav-contact-link").onclick = () => { currentPage = "contact"; renderContact(); };
+        document.getElementById("nav-login").onclick = () => { currentPage = "login"; renderLogin(); };
+        document.getElementById("nav-register").onclick = () => { currentPage = "register"; renderRegister(); };
+        document.getElementById("nav-cart").onclick = () => { currentPage = "cart"; renderCart(); };
+    }
 
     async function init() {
         await fetchProducts();
+        setupNavigation();
         renderHome();
+        updateCartCount();
         
     }
 
