@@ -54,7 +54,7 @@
           <button class="category-btn" data-category="jewelery">Jewelery</button>
           <button class="category-btn" data-category="electronics">Electronics</button>
         </div>
-        <div class="product-grid" id="products-list"></div>
+        <div class="products-grid" id="products-list"></div>
       `;
       renderProductsList(filteredProducts);
       attachCategoryFilterListeners();
@@ -143,19 +143,19 @@
             <h3>Our Products</h3>
             <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-top:1rem;">
               <div style="border:1px solid #dee2e6; border-radius:4px; padding:16px; text-align:center;">
-                <img src="./assets/pexels-photo-298863.jpeg" alt="img2" height="450px" width="230px">
+                <img src="./assets/pexels-photo-298863.jpeg" alt="img2" style="height:150px; object-fit:contain; margin-bottom:8px;" />
                 <h5>Men's Clothing</h5>
               </div>
               <div style="border:1px solid #dee2e6; border-radius:4px; padding:16px; text-align:center;">
-                <img src="./assets/pexels-photo-7679720.jpeg" alt="img"3 height="450px" width="230px">
+                <img src="./assets/pexels-photo-7679720.jpeg" alt="img"3 style="height:150px; object-fit:contain; margin-bottom:8px;" />
                 <h5>Women's Clothing</h5>
               </div>
               <div style="border:1px solid #dee2e6; border-radius:4px; padding:16px; text-align:center;">
-                <img src="./assets/pexels-photo-1927259.webp" alt="img4" height="450px" width="230px">
+                <img src="./assets/pexels-photo-1927259.webp" alt="img4" style="height:150px; object-fit:contain; margin-bottom:8px;" />
                 <h5>Jewelery</h5>            
               </div>
               <div style="border:1px solid #dee2e6; border-radius:4px; padding:16px; text-align:center;">
-                <img src="./assets/pexels-photo-356056.jpeg" alt="img5" height="450px" width="230px">
+                <img src="./assets/pexels-photo-356056.jpeg" alt="img5" style="height:150px; object-fit:contain; margin-bottom:8px;" />
                 <h5>Electronics</h5>
               </div>
             </div>
@@ -217,7 +217,7 @@
             <h2>Register</h2>
             <form id="register-form" novalidate>
               <label for="register-fullname">Full Name</label>
-              <input type="text" id="register-email">Email address</label>
+              <input type="text" id="register-email">
               <label for="register-email">Email address</label>
               <input type="email" id="register-email" required/>
               <label for="register-password">Password</label>
@@ -243,9 +243,13 @@
         const cartItems = Object.values(cart);
         if (cartItems.length === 0) {
             app.innerHTML = `
-              <h2>Cart</h2>
-              <p style="color:rgb(108, 117, 125);">YOUR CART IS EMPTY</p>
-              <button class="btn-continue-shopping"</button>
+              <center>
+                <h2>Cart</h2>
+                <hr>
+                <br><br>
+                <p style="color: black; font-size: 30px">YOUR CART IS EMPTY</p>
+                <button class="btn-continue-shopping"><i class="fa-solid fa-arrow-left"></i>Continue Shopping</button>
+              </center
             `;
             return;
         }
@@ -253,9 +257,10 @@
         total += 5;
         app.innerHTML = `
           <h2>Cart</h2>
+          <hr>
           <h4>Item List</h4>
           <div style="display:flex; gap:16px; flex-wrap:wrap">
-            <div style="flex:1; min-width:280px;">
+            <div style="flex:1; min-width:280px; border: 1px solid rgb(232, 232, 237); border-radius: 4px; padding: 16px; max-width: 320px;">
               <ul style="list-style:none; padding:0; margin:0;">
                 ${cartItems.map(item => `
                     <li style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap;">

@@ -43,7 +43,7 @@ nav{
     white-space: nowrap;
 }
 .nav-link:hover{
-    color: rgb(21, 25, 29);
+    color: rgb(37, 42, 44);
 }
 .nav-actions{
     display: flex;
@@ -53,7 +53,7 @@ nav{
 .btn-outline{
     border: 1px solid rgb(219, 219, 227);
     background: transparent;
-    color: rgb(21, 25, 29);
+    color: rgb(37, 42, 44);
     font-size: 13px;
     border-radius: 4px;
     padding: 4px 12px;
@@ -102,8 +102,9 @@ main{
     font-size: 20px;
 }
 .banner-text p{
+    margin: 0;
     font-size: 14px;
-    max-width: 650px;
+    max-width: 600px;
     line-height: 1.6;
 }
 h3.section-title{
@@ -165,7 +166,7 @@ hr.divider{
 hr.dividers{
     border: none;
     border-top: 1px solid #6f767c;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 }
 .product-title{
     font-size: 12px;
@@ -271,6 +272,12 @@ form button{
 form button:hover{
     background: rgb(56, 54, 54);
 }
+.btn-continue-shopping{
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+}
 footer{
     text-align: center;
     color: rgb(111, 120, 130);
@@ -294,7 +301,7 @@ footer a:hover{
     max-width: 320px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    color: rgb(48, 48, 50);
+    color: rgb(40, 38, 38);
 }
 .order-summary h3{
     margin-top: 0;
