@@ -251,8 +251,6 @@
             app.innerHTML = `
               <center>
                 <h2>Cart</h2>
-                <hr>
-                <br><br>
                 <p style="color: black; font-size: 30px">YOUR CART IS EMPTY</p>
                 <button class="btn-continue-shopping"><i class="fa-solid fa-arrow-left"></i>Continue Shopping</button>
               </center

@@ -258,7 +258,8 @@ form textarea {
     margin-bottom: 16px;
     box-sizing: border-box;
 }
-form button{
+
+form button {
     background: rgb(99, 98, 98);
     border: none;
     color: white;
