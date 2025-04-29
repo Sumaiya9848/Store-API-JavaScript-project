@@ -250,7 +250,7 @@
         if (cartItems.length === 0) {
             app.innerHTML = `
               <center>
-                <h2>Cart</h2>
+                <h2 style="text-align:center;">Cart</h2>
                 <hr>
                 <br><br>
                 <p style="color: black; font-size: 30px">YOUR CART IS EMPTY</p>
@@ -262,8 +262,9 @@
         let total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
         total += 5;
         app.innerHTML = `
-          <h2>Cart</h2>
+          <h2 style="text-align:center">Cart</h2>
           <hr>
+          <br><br>
           <div style="display:flex; gap:16px; flex-wrap:wrap">
             <div style="flex:1; min-width:280px;border: 1px solid rgb(232, 232, 237);border-radius: 4px; padding: 16px;">
              <h4>Item List</h4>
@@ -301,7 +302,7 @@
                   <strong>$ 5.00</strong>
                 </div>
                 <div class="summary-total">
-                  <span>Total</span>
+                  <span>Total amount</span>
                   <span>${formatPrice(total)}</span>
                 </div>
                 <button class="checkout-btn">Go to Checkout</button>

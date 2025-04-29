@@ -237,12 +237,12 @@ hr.dividers{
 .btn-add-cart:hover{
     background: rgb(55, 55, 68);
 }
-.centered-form-container {
+.centered-form-container{
     max-width: 480px;
     margin: 0 auto;
     padding: 0 16px;
 }
-form label {
+form label{
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 4px;
