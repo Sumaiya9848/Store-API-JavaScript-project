@@ -137,25 +137,25 @@
     
     function renderAbout() {
         app.innerHTML = `
-          <div class="centered-form-container">
+          <div>
             <h2>About Us</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facere doloremque veritatis odit similique sequi. Odit amet fuga nam quam quasi facilis sed doloremque saepe sint perspiciatis explicabo totam vero quas provident ipsam, veritatis nostrum velit quos recusandae est mollitia esse fugit dolore laudantium. Ex vel explicabo earum unde eligendi autem praesentium, doloremque distinctio nesciunt porro tempore quis eaque labore voluptatibus ea necessitatibus exercitationem tempora molestias. Ad consequuntur veniam sequi ullam tempore vel tenetur soluta dolore sunt maxime aliquam corporis est, quo saepe dolorem optio minus sint nemo totam dolorum! Reprehenderit delectus expedita a alias nam recusandae illo debitis repellat libero, quasi explicabo molestiae saepe, dolorem tempore itaque eveniet quam dignissimos blanditiis excepturi harum numquam vel nihil? Ipsum</p>
             <h3>Our Products</h3>
             <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-top:1rem;">
               <div style="border:1px solid #dee2e6; border-radius:4px; padding:16px; text-align:center;">
-                <img src="./assets/pexels-photo-298863.jpeg" alt="img2">
+                <img src="./assets/pexels-photo-298863.jpeg" alt="img2" height="450px" width="230px">
                 <h5>Men's Clothing</h5>
               </div>
               <div style="border:1px solid #dee2e6; border-radius:4px; padding:16px; text-align:center;">
-                <img src="./assets/pexels-photo-298863.jpeg" alt="img"3>
+                <img src="./assets/pexels-photo-7679720.jpeg" alt="img"3 height="450px" width="230px">
                 <h5>Women's Clothing</h5>
               </div>
               <div style="border:1px solid #dee2e6; border-radius:4px; padding:16px; text-align:center;">
-                <img src="./assets/pexels-photo-298863.jpeg" alt="img4">
+                <img src="./assets/pexels-photo-1927259.webp" alt="img4" height="450px" width="230px">
                 <h5>Jewelery</h5>            
               </div>
               <div style="border:1px solid #dee2e6; border-radius:4px; padding:16px; text-align:center;">
-                <img src="./assets/pexels-photo-298863.jpeg" alt="img5">
+                <img src="./assets/pexels-photo-356056.jpeg" alt="img5" height="450px" width="230px">
                 <h5>Electronics</h5>
               </div>
             </div>
