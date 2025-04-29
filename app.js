@@ -258,9 +258,10 @@
         app.innerHTML = `
           <h2>Cart</h2>
           <hr>
-          <h4>Item List</h4>
           <div style="display:flex; gap:16px; flex-wrap:wrap">
-            <div style="flex:1; min-width:280px; border: 1px solid rgb(232, 232, 237); border-radius: 4px; padding: 16px; max-width: 320px;">
+            <div style="flex:1; min-width:280px;border: 1px solid rgb(232, 232, 237);border-radius: 4px; padding: 16px;">
+             <h4>Item List</h4>
+             <hr>
               <ul style="list-style:none; padding:0; margin:0;">
                 ${cartItems.map(item => `
                     <li style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap;">
@@ -277,6 +278,7 @@
                         <button style="padding:4px 8px; font-size:16px; cursor:pointer;" data-id="${item.id}" data-action="increase">+</button>
                       </div>
                     </li>
+                    <hr>
                 `).join('')}
               </ul>
             </div>
